@@ -122,6 +122,17 @@
             height: 20px;
         }
 
+        .version-info {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #aaaaaa;
+        }
+
+        .version-info span {
+            color: #ff3333;
+            font-weight: 600;
+        }
+
         @media (max-width: 600px) {
             .logo {
                 font-size: 80px;
@@ -158,6 +169,23 @@
                 Discord
             </button>
         </div>
+
+        <div class="version-info">
+            <p>Version: <span id="version">Loading...</span></p>
+        </div>
     </div>
+
+    <script>
+        // Fetch version from Dropbox
+        fetch('https://www.dropbox.com/scl/fi/sfwl8gneljrgc1qrlimnj/version.txt?rlkey=mo5f9u2uvl28q8qei7mpru907&st=6fl2gqji&dl=1')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('version').textContent = data.trim();
+            })
+            .catch(error => {
+                console.error('Error fetching version:', error);
+                document.getElementById('version').textContent = 'Unknown';
+            });
+    </script>
 </body>
 </html>
