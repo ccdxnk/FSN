@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion - A Minecraft Utility Mod</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            font-size: 120px;
+            font-weight: 900;
+            color: #ff3333;
+            margin-bottom: 20px;
+            font-style: italic;
+            letter-spacing: 2px;
+            animation: glow 3s ease-in-out infinite;
+            text-shadow: 
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000,
+                -2px 0px 0 #000,
+                2px 0px 0 #000,
+                0px -2px 0 #000,
+                0px 2px 0 #000,
+                0 0 20px rgba(255, 51, 51, 0.8),
+                0 0 40px rgba(255, 51, 51, 0.5);
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.8));
+            }
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #ff4444 0%, #ff0000 100%);
+            color: white;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+        }
+
+        .btn-github {
+            background: linear-gradient(135deg, #ff5555 0%, #ff2222 100%);
+            color: white;
+        }
+
+        .btn-github:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 34, 34, 0.4);
+        }
+
+        .btn-discord {
+            background: linear-gradient(135deg, #ff4444 0%, #ff0000 100%);
+            color: white;
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 80px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Fusion</div>
+        <p class="tagline">A Minecraft Bedrock external client.</p>
+        
+        <div class="buttons">
+            <button class="btn btn-download" onclick="window.open('https://www.dropbox.com/scl/fi/qu06479w2e7onyltq6o86/FusionLauncher.exe?rlkey=fs04zog0nm9x9daaz6k12olsa&st=9eo2u53p&dl=1', '_blank')">
+                <span>⬇️</span>
+                Download
+            </button>
+            <button class="btn btn-discord" onclick="window.open('https://discord.gg/3sPnVQxYJ2', '_blank')">
+                <span>💬</span>
+                Discord
+            </button>
+        </div>
+    </div>
+</body>
+</html>
